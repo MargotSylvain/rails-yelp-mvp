@@ -1,0 +1,10 @@
+<% @restaurants.each do |restaurant| %>
+<h2><%= restaurant.name %></h2>
+<p><%= restaurant.category %></p>
+<p><%= restaurant.address %></p>
+<p><%= restaurant.phone %></p>
+<% end %>
+
+<%= link_to "Delete", restaurant_path(restaurant),
+method: :delete,
+data: { confirm: "Are you sure?" } %>
